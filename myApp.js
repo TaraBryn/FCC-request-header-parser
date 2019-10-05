@@ -12,13 +12,13 @@ var app = express();
 console.log('Hello World');
 
 /** 2) A first working Express Server */
-app.get('/', (req, res)=>res.sendFile(__dirname + '/views/index.html'));
+//app.get('/', (req, res)=>res.send('Hello Express'));
 
 /** 3) Serve an HTML file */
-
+app.get('/', (req, res)=>res.sendFile(__dirname + '/views/index.html'));
 
 /** 4) Serve static assets  */
-
+app.use(null,__dirname + '/public');
 
 /** 5) serve JSON on a specific route */
 
